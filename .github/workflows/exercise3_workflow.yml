@@ -1,5 +1,4 @@
-name: Workflow of exercise 1
-#run-name: First workflow # Optional
+name: Workflow of exercise 3
 
 # Events triggering the workflow
 on: [push]
