@@ -1,0 +1,15 @@
+name: Workflow of exercise 1
+#run-name: First workflow # Optional
+
+# Events triggering the workflow
+on: [push]
+
+env:
+    fruit: "banana"
+
+# Group of jobs to run as part of the workflow
+jobs:
+  fruit-seller:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "I love $fruit"
