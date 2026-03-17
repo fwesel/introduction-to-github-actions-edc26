@@ -11,5 +11,7 @@ jobs:
   fruit-seller:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "I love $fruit"
-      - run: echo "My github token is $github.token"
+      - run: echo "I love ${{ env.fruit }}"
+      - run: echo "My github token is ${{ secrets.GITHUB_TOKEN }}"
+      - if: ${{ env.fruit == 'banana' }}
+        run: echo "Fruit is $fruit"
